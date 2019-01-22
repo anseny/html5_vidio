@@ -38,16 +38,17 @@ window.onload = function(){
         // 视频进度条推移
         current.style.width = (video.currentTime/video.duration)*100+"%";
     },false)
+        // 拖拽进度条
+        cir.onmousedown = function(e){
+            var e = e||event;
+            video.pause();
+            var l = e.clientX-cir.offsetLeft;console.log(l)
+            document.onmousemove = function(e){
+                var e = e||event;
+                cir.style.left =e.clientX-l+"px";
+            }
+            cir.onmouseup = function(){
+                // video.play();
+            }
+        }
 }
-    // 拖拽进度条
-    cir.onmousedown = function(){
-        video.pause();
-
-    }
-    cir.onmousemove = function(e){
-        var e = e||window.event;
-        
-    }
-    cir.onmouseup = function(){
-        video.play();
-    }
