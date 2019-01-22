@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+}
+.madia{
+    width:540px;
+    height:333px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin:-166px 0 0 -270px;
+    /* border:1px solid black; */
+    box-shadow: 0 0 4px #838894;
+}
+.video{
+    width:540px;
+    height:306px;
+    float: left;
+    background: black;
+}
+.controls{
+    width:540px;
+    height:27px;
+    background: url("image/background.png") repeat-x;
+    float:left;
+}
+.play{
+    width:13px;
+    height:15px;
+    margin:6px 0 0 14px;
+    float:left;
+    background: url("image/Play.png") no-repeat
+}
+.pause{
+    width:13px;
+    height:15px;
+    margin:6px 0 0 14px;
+    float:left;
+    background: url("image/pause.png") no-repeat
+}
+.controtime{
+    height:9px;
+    width:267px;
+    margin:9px 0 0 14px;
+    float:left;
+    background: url("image/controtime3.png") repeat-x;
+    position: relative;
+}
+.cleft{
+    width:3px;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background: url("image/cleft.png") no-repeat;
+}
+.cright{
+    width:3px;
+    height:100%;
+    position: absolute;
+    right:0;
+    top:0;
+    background: url("image/cright.png") no-repeat;
+}
+.cir{
+    width:15px;
+    height:15px;
+    background: url("image/cir.png") no-repeat;
+    position: absolute;
+    top:-3px;
+    left:-7.5px;
+}
+.current{
+    width:50%;
+    height:100%;
+    float: left;
+    background: url("image/current.png") repeat-x;
+}
+.curtime{
+    font-size: 10px;
+    color:white;
+    margin:9px 0 0 10px;
+    height:9px;
+    width:62px;
+    float: left;
+    line-height: 9px;
+}
+.audio{
+    margin:5px 0 0 16px;
+    width:17px;
+    height:16px;
+    float: left;
+    background: url("image/audio.png") no-repeat;
+}
+.audioline{
+    height:7px;
+    width:61px;
+    background: url("image/controtime3.png") repeat-x;
+    float: left;
+    margin:10px 0 0 4px;
+    position: relative;
+}
+.aleft{
+    width:3px;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background: url("image/cleft.png") no-repeat;
+}
+.aright{
+    width:3px;
+    height:100%;
+    position: absolute;
+    right:0;
+    top:0;
+    background: url("image/cright.png") no-repeat;
+}
+.fullscreen{
+    margin:6px 0 0 45px;
+    width:13px;
+    height:15px;
+    background: url("image/fullscreen.png") no-repeat;
+    float: left;
+}

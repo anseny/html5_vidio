@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="vedio.css">
+</head>
+<body>
+    <div class="madia">
+        <!-- <div class="vedio"></div> -->
+        <video class ="video" src="data/imooc.webm" poster="image/poster.jpg"></video>
+        <!-- 控件 -->
+        <div class="controls">
+            <!-- 播放按钮 -->
+            <div class="play"></div>
+            <!-- 进度条 -->
+            <div class="controtime">
+                <!-- 进度条左边弧度 -->
+                <div class=cleft></div>
+                <!-- 右边弧度 -->
+                <div class="cright"></div>
+                <!-- 进度条拖动按钮 -->
+                <div class="cir"></div>
+                <!-- 当前进度 -->
+                <div class="current"></div>
+            </div> 
+            <!-- 播放时间 -->
+            <div class="curtime">
+                <span class = "currenttime">00:00</span>
+                <span>-</span>
+                <span class = "fulltime">00:00</span>
+            </div>
+            <!-- 音量键 -->
+            <div class="audio"></div>
+            <div class="audioline">
+                <!-- 进度条左边弧度 -->
+                <div class=aleft></div>
+                <!-- 右边弧度 -->
+                <div class="aright"></div>
+                <!-- 进度条拖动按钮 -->
+                <div class="cir2"></div>
+            </div>
+            <!-- 全屏 -->
+            <div class="fullscreen"></div>
+        </div>
+    </div>
+</body>
+    <script src="vedio.js"></script>
+</html>
