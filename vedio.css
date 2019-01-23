@@ -116,6 +116,15 @@
     top:0;
     background: url("image/cright.png") no-repeat;
 }
+.cir2{
+    width:15px;
+    height:14px;
+    background: url(image/cir3.png) no-repeat;
+    position: absolute;
+    top:-2.5px;
+    /* left:-7px; */
+    right:0;
+}
 .fullscreen{
     margin:6px 0 0 45px;
     width:13px;

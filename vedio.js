@@ -7,6 +7,9 @@ window.onload = function(){
         controtime = document.getElementsByClassName("controtime")[0],
         current = document.getElementsByClassName("current")[0],
         cir = document.getElementsByClassName("cir")[0],
+        audioline = document.querySelector(".audioline")
+        cir2 = document.querySelector(".cir2"),
+        fullscreen = document.querySelector(".fullscreen"),
         playbln = true;
     // 点击播放和暂停    
     play.onclick = function(){
@@ -31,12 +34,14 @@ window.onload = function(){
     }
     // 播放视频后
     video.addEventListener("timeupdate",function(){
+         // 视频进度条推移
+        current.style.width = (video.currentTime/video.duration)*100+"%";
+        // 圆形按钮和进度条跟着走
+        cir.style.left = current.offsetWidth-8.5+"px";
         // 视频时间推移
         var cm = parseInt(video.currentTime/60);
         var cs = parseInt(video.currentTime%60);
         currenttime.innerHTML = todou(cm)+":"+todou(cs);
-        // 视频进度条推移
-        current.style.width = (video.currentTime/video.duration)*100+"%";
     },false)
         // 拖拽进度条
         cir.onmousedown = function(e){
@@ -77,5 +82,36 @@ window.onload = function(){
                 }
             }
             return false;
+        }
+        // 拖动音量键
+        cir2.onmousedown = function(e){
+            var e = e||event;
+            var lx = e.clientX-this.offsetLeft;
+            console.log(lx);
+            document.onmousemove = function(e){
+                var e = e||event;
+                var needx2 = e.clientX-lx;
+                if(needx2<0){
+                    needx2 = 0;
+                }else if(needx2>audioline.offsetWidth-7.5){
+                    needx2=audioline.offsetWidth-7.5;
+                }
+                cir2.style.left = needx2+"px"
+                video.volume = cir2.offsetLeft/audioline.offsetWidth;
+            }
+            document.onmouseup = function(){
+                document.onmousemove = document.onmouseup = null;
+            }
+            return false;
+        }
+        // 全屏
+        fullscreen.onclick = function(){
+            if(video.mozRequestFullscreen){
+                video.mozRequestFullscreen();
+            }else if(video.webkitRequestFullscreen){
+                video.webkitRequestFullscreen();
+            }else{
+                video.requestFullscreen();
+            }
         }
 }
