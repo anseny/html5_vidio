@@ -50,18 +50,9 @@ window.onload = function(){
             var l = e.clientX-cir.offsetLeft;console.log(l)
             document.onmousemove = function(e){
                 var e = e||event;
-                    // min = -9,
-                    // max = 267;
                  var needX = e.clientX-l;
-                //  console.log(line);
-                //  if(line<-8.5){
-                //      line=-8.5;
-                //  }else if(line>controtime.offsetWidth-8.5){
-                //      line=(controtime.offsetWidth-8.5);
-                //  } 
                 var needX = e.clientX - l;
                 var maxX = controtime.offsetWidth - 8.5;
-    
                 needX = needX < -8.5 ? -8.5 : needX;
                 needX = needX > maxX ? maxX : needX;
                 //  console.log(line);
@@ -72,7 +63,7 @@ window.onload = function(){
             document.onmouseup = function(){
                 // video.play();
                 document.onmousemove = document.onmouseup = null;
-                video.currentTime = video.duration*(cir.offsetLeft/controtime.offsetWidth)
+                video.currentTime = video.duration*((cir.offsetLeft+9)/controtime.offsetWidth)
                 if( playbln == false){
                     video.play();
                     this.className = "pause";
